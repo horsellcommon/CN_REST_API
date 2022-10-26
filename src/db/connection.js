@@ -9,3 +9,5 @@ const connectToDatabase = async () => {
     console.log(`Could not connect...` + error);
   }
 };
+
+connectToDatabase();
