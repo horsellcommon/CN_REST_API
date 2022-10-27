@@ -1,4 +1,4 @@
-const Data = require("../userdata/dataModel");
+const Data = require("../userdata/dataModel"); // Import user for lines 15/16?
 
 exports.createData = async (request, response) => {
   try {
@@ -12,7 +12,7 @@ exports.createData = async (request, response) => {
 
 exports.readData = async (request, response) => {
   try {
-    const info = await Data.find({});
+    const info = await Data.find({}); // if username matches User then return both Data/User objects
     response.status(200).send({ data: info });
   } catch (error) {
     console.log(error);
