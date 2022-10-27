@@ -47,7 +47,7 @@ exports.updateUser = async (request, response) => {
       { username: request.body.username },
       { [request.body.key]: request.body.value }
     );
-    response.status(201).send({ message: "Successfully updated." });
+    response.status(201).send({ message: "Record successfully updated." });
   } catch (error) {
     console.log(error);
     response.status(500).send({ error: error.message });
