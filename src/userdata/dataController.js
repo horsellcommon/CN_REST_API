@@ -10,6 +10,16 @@ exports.createData = async (request, response) => {
   }
 };
 
+exports.readData = async (request, response) => {
+  try {
+    const info = await Data.find({});
+    response.status(200).send({ data: info });
+  } catch (error) {
+    console.log(error);
+    response.status(500).send({ error: error.message });
+  }
+};
+
 exports.updateData = async (request, response) => {
   try {
     await Data.updateOne(
