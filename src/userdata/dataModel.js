@@ -4,7 +4,12 @@ const dataSchema = new mongoose.Schema({
   dateofbirth: {
     type: Number,
     required: true,
-  }
+    unique: true,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
 });
 
 dataSchema.statics.findByCredentials = async (dateofbirth) => {
