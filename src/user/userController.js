@@ -16,7 +16,14 @@ exports.loginUser = async (request, response) => {
   try {
     const token = await jwt.sign(
       { _id: request.user._id },
-      process.env.SECRET_KEY
+      process.env.SECRET_KEY,
+      response
+        .status(200)
+        .send({
+          user: request.user.usename,
+          token,
+          message: "Successfully logged in...",
+        })
     );
   } catch (error) {
     console.log(error);

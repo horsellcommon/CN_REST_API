@@ -35,7 +35,7 @@ exports.comparePasswords = async (request, response, next) => {
     ) {
       next();
     } else {
-      throw new Error("Incorrect userid or password...");
+      throw new Error("Incorrect user id or password...");
     }
   } catch (error) {
     console.log(error);
