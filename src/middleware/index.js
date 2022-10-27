@@ -4,7 +4,7 @@ const User = require("../user/userModel");
 
 exports.hashPass = async (request, response, next) => {
   try {
-    request.body.password = await bcrypt.hash(request.body.password, 15);
+    request.body.password = await bcrypt.hash(request.body.password, 16);
     next();
   } catch (error) {
     console.log(error);
