@@ -11,6 +11,6 @@ const dataRouter = Router();
 dataRouter.post("/createdob", createData);
 dataRouter.get("/readdob", readData);
 dataRouter.put("/updatedob", updateData);
-dataRouter.delete("/delete/:dateofbirth", deleteData);
+dataRouter.delete("/deletedob/:username", deleteData);
 
 module.exports = dataRouter;
