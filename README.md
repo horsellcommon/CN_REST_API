@@ -1,3 +1,5 @@
+NOTE: "First commit mistake, supposed to switch to separate GitHub repo and push to that but made a mistake."
+
 # CN_REST_API
 
 End of week project for Code Nation.
